@@ -8,7 +8,17 @@ Após iniciar um servidor local nesta pasta, abra:
 
 - **http://localhost:8000/index.html**
 
-### Início rápido
+## Início rápido
+
+### Opção 1 (recomendada)
+
+```bash
+./start.sh
+```
+
+Esse comando já mostra no terminal o link para abrir no navegador.
+
+### Opção 2
 
 ```bash
 python3 -m http.server 8000
