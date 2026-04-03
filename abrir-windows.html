@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GeoSketch — Comando único Windows</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 2rem; line-height: 1.5; }
+    code { display: block; background: #f5f5f5; padding: 1rem; border-radius: 8px; white-space: pre-wrap; }
+  </style>
+</head>
+<body>
+  <h1>Comando único para Windows</h1>
+  <p>Abra o <strong>PowerShell</strong> na pasta do projeto e execute:</p>
+  <code>powershell -NoProfile -Command "$p = Start-Process python -ArgumentList '-m','http.server','8000' -PassThru; Start-Sleep -Seconds 1; Start-Process 'http://localhost:8000/index.html'; Wait-Process -Id $p.Id"</code>
+  <p>
+    Esse comando inicia o servidor local, abre o navegador automaticamente e mantém o servidor em execução.
+    Para parar, pressione <strong>Ctrl + C</strong> na janela do terminal.
+  </p>
+</body>
+</html>
