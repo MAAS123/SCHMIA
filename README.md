@@ -26,6 +26,16 @@ python3 -m http.server 8000
 
 Depois, acesse o link acima no navegador.
 
+## Windows (comando único que abre o navegador automaticamente)
+
+No PowerShell, dentro da pasta do projeto:
+
+```powershell
+powershell -NoProfile -Command "$p = Start-Process python -ArgumentList '-m','http.server','8000' -PassThru; Start-Sleep -Seconds 1; Start-Process 'http://localhost:8000/index.html'; Wait-Process -Id $p.Id"
+```
+
+Também deixei essa instrução em formato HTML no arquivo `abrir-windows.html`.
+
 ## Funcionalidades
 
 - Desenho de ponto, linha, polígono, retângulo e círculo.
